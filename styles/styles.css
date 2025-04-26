@@ -47,8 +47,8 @@ body{
 .imagem {
     display: block;
     margin: 2em auto;
-    max-width: 40%;
-    height: auto;
+    max-width: 80%;
+    
 }
 .container__2texto{
     display: flex;
@@ -90,13 +90,25 @@ body{
 }
 .bloco {
     display: flex;
-    align-items: center;
+    align-items: left;
     justify-content: space-evenly;
     flex-wrap: wrap; /* Para responsividade em telas menores */
     padding: 2em;
     gap: 2em;
     margin: 5em 0 0em 0;
 }
+
+.bloco__quem {
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    flex-wrap: wrap; /* Para responsividade em telas menores */
+    padding: 2em;
+    gap: 2em;
+    margin: 5em 0 0em 0;
+    flex-direction: column;
+}
+
 
 .galeria{
     display: flex;
@@ -139,4 +151,20 @@ body{
     cursor: pointer;
    
     }
-   
+
+    .container{@media (max-width: 1250px) {
+
+        flex-direction: column;
+        padding: 5%;
+    }
+    
+    .bloco{
+        width: auto;
+    }
+    .imagem{
+        width: 60vh;
+    }
+    .bloco__quem{
+        flex-direction: column-reverse;
+    }
+  }
